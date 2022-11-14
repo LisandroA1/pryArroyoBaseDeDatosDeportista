@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{905F7481-4FDB-40FF-B852-684F83E6394A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>pryArroyoBaseDeDatos</RootNamespace>
+    <AssemblyName>pryArroyoBaseDeDatos</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Deportista.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsDeportista.cs" />
+    <Compile Include="clsEntrenadores.cs" />
+    <Compile Include="frmConsultaDeportista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaDeportista.Designer.cs">
+      <DependentUpon>frmConsultaDeportista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaEntrenador.Designer.cs">
+      <DependentUpon>frmConsultaEntrenador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicioPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicioPrincipal.Designer.cs">
+      <DependentUpon>frmInicioPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarRegistroDeportista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarRegistroDeportista.Designer.cs">
+      <DependentUpon>frmModificarRegistroDeportista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModificarRegistroEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModificarRegistroEntrenador.Designer.cs">
+      <DependentUpon>frmModificarRegistroEntrenador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroDeportista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroDeportista.Designer.cs">
+      <DependentUpon>frmRegistroDeportista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroEntrenador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroEntrenador.Designer.cs">
+      <DependentUpon>frmRegistroEntrenador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConsultaDeportista.resx">
+      <DependentUpon>frmConsultaDeportista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaEntrenador.resx">
+      <DependentUpon>frmConsultaEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicioPrincipal.resx">
+      <DependentUpon>frmInicioPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarRegistroDeportista.resx">
+      <DependentUpon>frmModificarRegistroDeportista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModificarRegistroEntrenador.resx">
+      <DependentUpon>frmModificarRegistroEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroDeportista.resx">
+      <DependentUpon>frmRegistroDeportista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroEntrenador.resx">
+      <DependentUpon>frmRegistroEntrenador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Deportista.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
